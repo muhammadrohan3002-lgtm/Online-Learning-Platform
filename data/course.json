@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "Alex Mercer",
+    "duration": "45 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Master HTML, CSS, JavaScript, React, and Node.js with real-world industry projects.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop",
+    "category": "Development",
+    "curriculum": [
+      "HTML5 & Modern CSS Layouts",
+      "JavaScript Core & Async Patterns",
+      "React 19 & Next.js App Router",
+      "REST APIs with Node & Express"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Modern UI/UX Design with Figma",
+    "instructor": "Sarah Jenkins",
+    "duration": "28 hours",
+    "rating": 4.8,
+    "level": "All Levels",
+    "description": "Design clean mobile and web interfaces with auto-layout, components, and design systems.",
+    "image": "https://images.unsplash.com/photo-1581291518655-9523c932deda?w=600&auto=format&fit=crop",
+    "category": "Design",
+    "curriculum": [
+      "Design Thinking Foundations",
+      "Figma Wireframing & Prototyping",
+      "Design Systems & Tokenization",
+      "Client Handoff & Usability Testing"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Growth Marketing Masterclass",
+    "instructor": "Michael Chang",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Learn conversion rate optimization, Google Ads, SEO strategies, and viral loop design.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop",
+    "category": "Marketing",
+    "curriculum": [
+      "Funnel Architecture & Analytics",
+      "Technical SEO & Content Hubs",
+      "Paid Performance Ads (Google/Meta)",
+      "A/B Testing & Conversion Engineering"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science & AI",
+    "instructor": "Dr. Emily Watson",
+    "duration": "35 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Hands-on data cleaning, visualization with Pandas, and machine learning models with Scikit-Learn.",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop",
+    "category": "Data Science",
+    "curriculum": [
+      "Python Data Structures & NumPy",
+      "Data Wrangling with Pandas",
+      "Exploratory Data Analysis & Seaborn",
+      "Machine Learning Fundamentals"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "DevOps & Cloud Architecture (AWS)",
+    "instructor": "David Miller",
+    "duration": "30 hours",
+    "rating": 4.6,
+    "level": "Advanced",
+    "description": "Deploy resilient full-stack applications with Docker, Kubernetes, CI/CD pipelines, and AWS.",
+    "image": "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=600&auto=format&fit=crop",
+    "category": "DevOps",
+    "curriculum": [
+      "Linux Server Administration",
+      "Docker Containers & Compose",
+      "Kubernetes Cluster Orchestration",
+      "GitHub Actions & CI/CD Pipelines"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Mobile App Development with Flutter",
+    "instructor": "Kavita Rao",
+    "duration": "40 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Build high-performance cross-platform iOS and Android applications with Dart and Flutter.",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&auto=format&fit=crop",
+    "category": "Mobile",
+    "curriculum": [
+      "Dart Programming Language",
+      "Flutter Widget Architecture",
+      "State Management with Riverpod",
+      "Firebase Integration & App Store Release"
+    ]
+  }
+]
