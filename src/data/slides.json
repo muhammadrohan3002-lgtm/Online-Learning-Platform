@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Upgrade Your Skills Today 🚀",
+    "description": "Join thousands of builders learning practical Web Development, Design, and DevOps.",
+    "badge": "Industry Standard",
+    "buttonText": "Explore Programs",
+    "link": "/courses"
+  },
+  {
+    "id": 2,
+    "title": "Learn from Industry Experts 🏆",
+    "description": "Every curriculum is tailored and reviewed directly by active tech leads and architects.",
+    "badge": "Expert Mentorship",
+    "buttonText": "Explore Programs",
+    "link": "/courses"
+  },
+  {
+    "id": 3,
+    "title": "Build Projects That Get You Hired 💼",
+    "description": "Gain portfolio-ready proof-of-work with clean architecture and guided feedback.",
+    "badge": "Real-World Experience",
+    "buttonText": "Explore Programs",
+    "link": "/courses"
+  }
+]

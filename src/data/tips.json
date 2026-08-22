@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icon": "⏱️",
+    "title": "Pomodoro Technique",
+    "desc": "Study in focused 25-minute sprints followed by short 5-minute breaks to maintain peak mental energy."
+  },
+  {
+    "id": 2,
+    "icon": "🧠",
+    "title": "Active Recall",
+    "desc": "Test yourself regularly instead of passively re-reading notes to boost long-term retention."
+  },
+  {
+    "id": 3,
+    "icon": "📅",
+    "title": "Spaced Repetition",
+    "desc": "Review key concepts at increasing intervals over time to permanently solidify new knowledge."
+  }
+]
