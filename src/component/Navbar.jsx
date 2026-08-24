@@ -1,6 +1,22 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
+import { useSession, signOut } from "@/lib/auth-client";
+import toast from "react-hot-toast";
 
 export default function Navbar() {
+  const { data: session } = useSession();
+
+  const handleLogout = async () => {
+    try {
+      await signOut();
+      toast.success("Logged out successfully");
+    } catch (err) {
+      toast.error("Failed to sign out");
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-base-100/90 backdrop-blur-md border-b border-base-200">
       <div className="navbar max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,14 +76,41 @@ export default function Navbar() {
           </ul>
         </div>
 
-        {/* Login / Register */}
+        {/* Login / Register / User profile */}
         <div className="navbar-end gap-2">
-          <Link href="/login" className="btn btn-ghost btn-sm font-medium">
-            Login
-          </Link>
-          <Link href="/register" className="btn btn-primary btn-sm font-semibold shadow-xs">
-            Register
-          </Link>
+          {session?.user ? (
+            <div className="flex items-center gap-3">
+              {session.user.image ? (
+                <div className="avatar">
+                  <div className="w-8 h-8 rounded-full ring-2 ring-primary ring-offset-base-100 ring-offset-1">
+                    <img
+                      src={session.user.image}
+                      alt={session.user.name || "User Avatar"}
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+                </div>
+              ) : null}
+              <span className="text-xs font-semibold hidden sm:inline-block max-w-[140px] truncate">
+                Hi, {session.user.name || session.user.email}
+              </span>
+              <button
+                onClick={handleLogout}
+                className="btn btn-outline btn-error btn-sm font-medium"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <>
+              <Link href="/login" className="btn btn-ghost btn-sm font-medium">
+                Login
+              </Link>
+              <Link href="/register" className="btn btn-primary btn-sm font-semibold shadow-xs">
+                Register
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </header>

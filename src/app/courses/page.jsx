@@ -55,13 +55,13 @@ export default function CoursesPage() {
               <div className="card-body p-6">
                 <div className="flex items-center justify-between text-xs mb-2">
                   <span className="badge badge-primary badge-outline">{course.category}</span>
-                  <span className="font-semibold text-amber-600">⭐ {course.rating}</span>
+                  <span className="font-semibold text-amber-600"> {course.rating}</span>
                 </div>
                 <h2 className="card-title text-base font-bold">{course.title}</h2>
                 <p className="text-xs text-gray-500 line-clamp-2">{course.description}</p>
                 <div className="flex justify-between items-center text-xs text-gray-500 my-2 pt-2 border-t">
-                  <span>👤 {course.instructor}</span>
-                  <span>⏱ {course.duration}</span>
+                  <span> {course.instructor}</span>
+                  <span> {course.duration}</span>
                 </div>
                 <div className="card-actions justify-end mt-2">
                   <Link href={`/courses/${course.id}`} className="btn btn-primary btn-sm w-full">
