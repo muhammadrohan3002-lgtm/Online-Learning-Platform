@@ -1,7 +1,6 @@
 "use client";
-import { useEffect } from "react";
-import { useParams, useRouter } from "next/navigation";
-import { useSession } from "@/lib/auth-client";
+
+import { useParams } from "next/navigation";
 import coursesData from "@/data/courses.json";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,33 +8,15 @@ import toast from "react-hot-toast";
 
 export default function CourseDetailsPage() {
   const { id } = useParams();
-  const router = useRouter();
-  const { data: session, isPending } = useSession();
-
   const course = coursesData.find((c) => c.id === parseInt(id, 10));
-
-  useEffect(() => {
-    if (!isPending && !session) {
-      toast.error("Please login to view course details");
-      router.push(`/login?redirect=/courses/${id}`);
-    }
-  }, [session, isPending, router, id]);
-
-  if (isPending) {
-    return (
-      <div className="min-h-[60vh] flex items-center justify-center">
-        <span className="loading loading-spinner loading-lg text-primary"></span>
-      </div>
-    );
-  }
-
-  if (!session) return null;
 
   if (!course) {
     return (
       <div className="text-center py-20">
         <h2 className="text-xl font-bold">Course Not Found</h2>
-        <Link href="/courses" className="btn btn-link">Back to Courses</Link>
+        <Link href="/courses" className="btn btn-link">
+          Back to Courses
+        </Link>
       </div>
     );
   }
@@ -68,7 +49,10 @@ export default function CourseDetailsPage() {
             <h2 className="text-xl font-bold mb-4">Course Curriculum</h2>
             <div className="space-y-3">
               {course.curriculum?.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-base-100 rounded-lg border border-base-200">
+                <div
+                  key={idx}
+                  className="flex items-center gap-3 p-4 bg-base-100 rounded-lg border border-base-200"
+                >
                   <span className="badge badge-neutral badge-sm font-mono">{idx + 1}</span>
                   <span className="text-sm font-medium">{item}</span>
                 </div>
@@ -99,7 +83,7 @@ export default function CourseDetailsPage() {
                 <span className="font-semibold text-success">Full Lifetime</span>
               </div>
             </div>
-            <button 
+            <button
               onClick={() => toast.success("Enrolled in track successfully!")}
               className="btn btn-primary w-full mt-6"
             >

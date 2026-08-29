@@ -101,21 +101,21 @@ export default function Footer() {
 
           {/* Platform */}
           <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400">Account</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400">Platform</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/login" className="hover:text-primary transition-colors">
-                  Sign In
-                </Link>
-              </li>
-              <li>
-                <Link href="/register" className="hover:text-primary transition-colors">
-                  Register
-                </Link>
-              </li>
-              <li>
                 <Link href="/courses" className="hover:text-primary transition-colors">
-                  My Learning
+                  All Programs
+                </Link>
+              </li>
+              <li>
+                <Link href="/#trending" className="hover:text-primary transition-colors">
+                  Popular Tracks
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="hover:text-primary transition-colors">
+                  Study Tips
                 </Link>
               </li>
             </ul>
