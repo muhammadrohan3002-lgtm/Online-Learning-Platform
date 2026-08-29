@@ -13,6 +13,12 @@ export default function LoginPage() {
 
   const onSubmit = async (data) => {
     console.log(data);
+    const { data: res, error } = await authClient.signIn.email({
+      email: data.email,
+      password: data.password,
+      rememberMe: true,
+      callbackURL: "/",
+    });
 
   };
 
@@ -29,7 +35,7 @@ export default function LoginPage() {
           placeholder="Email"
           className="input"
         />
-         {errors.email && (
+        {errors.email && (
           <span className="text-error text-sm">This field is required</span>
         )}
 
