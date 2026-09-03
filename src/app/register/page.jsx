@@ -95,7 +95,7 @@ export default function RegisterPage() {
             <input
               type="text"
               {...register("name", { required: "Name is required" })}
-              placeholder="John Doe"
+              placeholder="Enter your Name"
               className="input input-bordered w-full mt-1"
               disabled={loading || googleLoading}
             />
@@ -118,7 +118,7 @@ export default function RegisterPage() {
                   message: "Invalid email address",
                 },
               })}
-              placeholder="you@example.com"
+              placeholder="Enter your Email"
               className="input input-bordered w-full mt-1"
               disabled={loading || googleLoading}
             />
@@ -159,7 +159,7 @@ export default function RegisterPage() {
                     message: "Password must be at least 6 characters",
                   },
                 })}
-                placeholder="••••••••"
+                placeholder="Enter your password"
                 className="input input-bordered w-full pr-10"
                 disabled={loading || googleLoading}
               />
